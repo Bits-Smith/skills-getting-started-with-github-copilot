@@ -156,7 +156,7 @@ footer {
 }
 
 .participants-section ul {
-  list-style-position: inside;
+  list-style: none;
   padding-left: 10px;
 }
 
@@ -164,6 +164,21 @@ footer {
   color: #666;
   font-size: 0.9em;
   margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-participant {
+  cursor: pointer;
+  color: #c62828;
+  margin-left: 10px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.delete-participant:hover {
+  opacity: 1;
 }
 
 .no-participants {
