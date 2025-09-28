@@ -13,7 +13,8 @@ from pathlib import Path
 from pymongo import MongoClient
 
 # Initialize MongoDB connection
-client = MongoClient('mongodb://localhost:27017/')
+mongodb_uri = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/')
+client = MongoClient(mongodb_uri)
 db = client['mergington_high']
 activities_collection = db['activities']
 
